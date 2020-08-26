@@ -2,6 +2,8 @@ let inpNewTask=$('#inpNewTask')
 const ulNewTask=$('#ulNewTask')
 let btnAdd=$('#btnAdd')
 let btnClear=$('#btnClear')
+let btnCleanup=$('#cleanup')
+let btnSort=$('#btnSort')
 
 function addItem(){
     let listItem=$('<li>',{
@@ -27,4 +29,10 @@ btnAdd.click(addItem)
 
 btnClear.click( ()=>{inpNewTask.val("")} )
 
+btnCleanup.click(()=>{
+    $('.done').remove();
+})
 
+btnSort.click(()=>{
+    $('.done').appendTo(ulNewTask)
+})

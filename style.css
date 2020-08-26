@@ -19,6 +19,7 @@ h1{
 p{
     color: aliceblue;
     margin-left:2%;
+    margin-bottom: -0.5rem;
     font-size: 1.5em;
 }
 @media only screen and (max-width: 768px) {
@@ -37,5 +38,8 @@ p{
     .row .list-group{
         margin: 5% auto;
         padding-left:0.1rem;
+    }
+    p{
+        margin-left:7%;
     }
 }
