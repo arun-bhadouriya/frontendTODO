@@ -5,6 +5,33 @@ let btnClear=$('#btnClear')
 let btnCleanup=$('#cleanup')
 let btnSort=$('#btnSort')
 
+function toggleInpBtn(valIsEmpty,other){
+    if(valIsEmpty){
+        btnAdd.prop('disabled',false)
+        btnClear.prop('disabled',false)
+    }
+    else{
+        btnAdd.prop('disabled',true)
+        btnClear.prop('disabled',true)
+    }
+}
+
+inpNewTask.on('input',()=>{
+    toggleInpBtn(inpNewTask.val()!="");
+})
+
+
+
+function toggleSortAndCleanup(e){
+    if(e){
+        btnSort.prop('disabled',false)
+        btnCleanup.prop('disabled',false)
+    }else{
+        btnSort.prop('disabled',true)
+        btnCleanup.prop('disabled',true)
+    }
+}
+
 function addItem(){
     let listItem=$('<li>',{
         class:"list-group-item li",
@@ -19,15 +46,29 @@ function addItem(){
     inpNewTask.val("");
 }
 
+
+
 inpNewTask.keypress((e)=>{
     if(e.which=="13"){
         addItem()
+        toggleInpBtn(false)
+        $('ul li').click(()=>toggleSortAndCleanup(1))
+        btnCleanup.click(()=>toggleSortAndCleanup(0))
     }
 })
 
-btnAdd.click(addItem)
+btnAdd.click(()=>{
+    addItem()
+    toggleInpBtn(false)
+   
+})
 
-btnClear.click( ()=>{inpNewTask.val("")} )
+
+btnClear.click( ()=>{
+    inpNewTask.val("")
+    toggleInpBtn(false)
+    
+} )
 
 btnCleanup.click(()=>{
     $('.done').remove();
@@ -36,3 +77,7 @@ btnCleanup.click(()=>{
 btnSort.click(()=>{
     $('.done').appendTo(ulNewTask)
 })
+
+
+
+
