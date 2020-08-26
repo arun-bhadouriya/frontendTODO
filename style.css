@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+    /* padding: 4%; */
+}
+h1{
+    text-align: center;
+    margin: 3%;
+    color:white;
+    font-family: 'Berkshire Swash', cursive;    
+}
+
+.list-group-item.done{
+    cursor: pointer;
+    color: #6c757d;
+    text-decoration:line-through;
+}
+
+
+p{
+    color: aliceblue;
+    margin-left:2%;
+    font-size: 1.5em;
+}
+@media only screen and (max-width: 768px) {
+    .tabletResponsive{
+        display: block;
+        max-width: 100%;
+        margin: auto;
+    }
+    .tabletResponsive .tabletview{
+        margin-left: 2%;
+        max-width: 100%;
+    }
+    .tabletview.col-4{
+        margin-left:8%;
+    }
+    .row .list-group{
+        margin: 5% auto;
+        padding-left:0.1rem;
+    }
+}

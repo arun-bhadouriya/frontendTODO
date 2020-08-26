@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.js"></script>
+
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">   <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Todo Task</h1>
+        <p>New Task</p>
+        <div class="row tabletResponsive">
+            <div class=" tabletview col-8 p-4 input-group mb-3">      
+            <input type="text" id="inpNewTask" class=" p-4 form-control" placeholder="Add Your Task TODO" aria-label="add task" aria-describedby="add task">
+            </div>
+            <!-- <p style="color: white;" class="form-text text-muted">Add a task to your todo list</p> -->
+            
+            <div class="col-4 tabletview">
+                <button type="button" class="col-5 btn btn-success" id="btnAdd">ADD</button>
+                <button type="button" class="col-5 p-2 btn btn-danger" id="btnClear">CLEAR</button>
+                <button type="button" class="col-5 p-2 btn btn-warning">Warning</button>
+                <button type="button" class="col-5 btn btn-info">Info</button>
+            </div>
+        </div>
+        <div class="row">
+            <ul class="list-group col-11 px-4 " id="ulNewTask">
+                <!-- <li class="list-group-item li">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li> -->
+              </ul>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
