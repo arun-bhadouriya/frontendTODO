@@ -60,7 +60,8 @@ inpNewTask.keypress((e)=>{
 btnAdd.click(()=>{
     addItem()
     toggleInpBtn(false)
-   
+    $('ul li').click(()=>toggleSortAndCleanup(1))
+    btnCleanup.click(()=>toggleSortAndCleanup(0))
 })
 
 
